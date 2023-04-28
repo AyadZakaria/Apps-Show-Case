@@ -1,0 +1,126 @@
+/* first Section */
+.mainInfoSection{
+    display: flex;
+    height: 100vh;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+}
+/* First Section Right div (Content) */
+.mainInfoSection .right{
+    width: 40%;
+}
+.mainInfoSection .left{
+    position: relative;
+}
+.mainInfoSection .right h1{
+    font-size: 35px;
+    margin-top: 0;
+}
+/* First Section Left div (image) */
+.mainInfoSection .left img {
+    width: 280px;   
+}
+/* the styling Blockes Behind the image */
+.mainInfoSection .left .BlockOne{
+    background-color: var(--secondary-color);
+    width: 190px;
+    position: absolute;
+    height: 190px;
+    border-radius: 20px;
+    top: 50px;
+    left: 150px;
+    transform: rotate(100deg);
+     z-index: -1;
+}
+.mainInfoSection .left .BlockTwo{
+    background-color: var(--secondary-color);
+    width: 140px;
+    position: absolute;
+    height: 140px;
+    border-radius: 20px;
+    top: -30px;
+    left: -35px;
+    transform: rotate(70deg);
+    z-index: -1;
+}
+/* Second Section */
+.SecondInfoSection{
+    display: flex;
+    height: 100vh;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: center;
+}
+/* Second Section Left div (content) */
+.SecondInfoSection .left{
+    width: 40%;
+}
+.SecondInfoSection .left h1{
+    font-size: 35px;
+    margin-top: 0;
+}
+.SecondInfoSection .left a{
+    display: flex;
+    font-size: larger;
+    font-weight: 500;
+    transition: .5s;
+    color: var(--secondary-color);
+}
+.SecondInfoSection .left a:hover{
+    color: var(--secondary-text-color);
+}
+.SecondInfoSection .left a .LinkArrowIcon{
+    padding-top: 5px;
+    font-size: x-large;
+}
+/* Second Section right div (image) */
+.SecondInfoSection .right{
+    position: relative;
+}
+.SecondInfoSection .right img {
+    width: 280px;
+}
+/* second Section right div background blocks */
+.SecondInfoSection .right .BlockOneBeta{
+    background-color: var(--secondary-color);
+    width: 200px;
+    position: absolute;
+    height: 200px;
+    border-radius: 20px;
+    top: -40px;
+    left: 55%;
+    transform: rotate(115deg);
+    z-index: -1;
+}
+.SecondInfoSection .right .BlockTwoBeta{
+    background-color: var(--secondary-color);
+    width: 220px;
+    position: absolute;
+    height: 220px;
+    border-radius: 20px;
+    top: 55%;
+    left: -110px;
+    transform: rotate(110deg);
+    z-index: -1;   
+}
+@media screen and (max-width: 1030px) {
+    .SecondInfoSection,
+    .mainInfoSection{
+        margin-top: 60px;
+        flex-direction: column;
+        height: fit-content;
+    }
+    .SecondInfoSection .left,
+    .mainInfoSection .right{
+        width: 90%;
+        text-align: center;
+        margin: 40px 80px;
+    }
+    .SecondInfoSection .left a{
+        justify-content: center;
+    }
+    .SecondInfoSection{
+        flex-direction: column-reverse;
+    }
+}

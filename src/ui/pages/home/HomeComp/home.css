@@ -1,0 +1,129 @@
+/* main section element */
+.mainSection{
+    display: flex;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: -webkit-fill-available;
+}
+/* left section */
+.mainSection .left{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 60%;
+    padding-top: 30px;
+}
+.mainSection .left h1{
+    margin: 5px 0px;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 1.2em;
+    letter-spacing: 1px;
+}
+.mainSection .left p {
+    font-size: medium;
+    margin-top: 35px;
+    color: var(--secondary-text-color);
+}
+.left p a{
+    color: var(--secondary-color);
+}
+/* right div in the section */
+.mainSection .right .dumble{
+    width: 140px;
+}
+.mainSection .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 60%;
+    padding-top: 30px;
+    width: 25%;
+}
+.mainSection .right p{
+    color: var(--secondary-text-color);
+}
+.mainSection .right h1{
+    font-size: 30px;
+    margin:5px;
+}
+/* the center div in the section */
+.mainSection .middle{
+    width: 30%;
+    position: relative;
+}
+.mainSection .middle .mainPic{
+    width: 700px;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+}
+.mainSection .middle .bachgroundDiv{
+    background: linear-gradient(var(--secondary-color), transparent);
+    width: 22rem;
+    height: 30rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 12rem 12rem 0 0 ;
+    overflow: hidden;
+    padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+.mainSection .middle .SecondaryPic{
+    position: absolute;
+    width: 500px;
+    top: 7%;
+    right: -50px;
+}
+@media screen and (max-width: 1030px) {
+.mainSection{
+    flex-direction: column;
+    margin: 20px auto;
+    align-items: center;
+    height: fit-content;
+    justify-content: space-between;
+}
+.mainSection .left{
+    width: -webkit-fill-available;
+    align-items: center;
+}
+.mainSection .left h1{
+    text-align: center;
+}
+.mainSection .left p{
+    text-align: center;
+    width: 80%;
+}
+.mainSection .middle .bachgroundDiv{
+    left: 55%;
+}
+.mainSection .middle{
+    width: -webkit-fill-available;
+    align-items: center;
+    margin-top: 50px;
+}
+.mainSection .middle .SecondaryPic{
+    position: absolute;
+    width: 50%;
+    top: 50px;
+    right: 20%;
+}
+.mainSection .right{
+    margin-top: 570px;
+    width: -webkit-fill-available;
+    align-items: center;
+    text-align: center;
+}
+}
+@media screen and (max-width: 720px) {
+    .mainSection .middle .SecondaryPic{
+        position: absolute;
+        width: 80%;
+        top: 50px;
+        right: 10%;
+    }
+    .mainSection .middle .bachgroundDiv{
+        left: 50%;
+    }
+}

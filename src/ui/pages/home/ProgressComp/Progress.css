@@ -1,0 +1,102 @@
+.mainProgressSection{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 20px auto;
+    height: 100vh;
+}
+/* main Progress Section left container */
+.mainProgressSection .left{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+/* Progress Section left Container individual  paragraph */
+.mainProgressSection .left .checkParagraph{
+    color: var(--secondary-text-color);
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+}
+.mainProgressSection .left .checkParagraph .paraIcon{
+    margin-right: 20px;
+}
+/* paragraphs group */
+.mainProgressSection .left .checkParagraphs{
+    margin: 20px 0px;
+}
+/* Progress Section Right container */
+.mainProgressSection .right img{
+    width: 350px;
+}
+/* Right Section */
+.mainProgressSection .right{
+    position: relative;
+}
+/* background blocks */
+.mainProgressSection .right .BlockOneGama{
+    background-color: var(--secondary-color);
+    width: 150px;
+    position: absolute;
+    height: 150px;
+    border-radius: 20px;
+    top: -10px;
+    left: 250px;
+    transform: rotate(110deg);
+    z-index: -1; 
+}
+.mainProgressSection .right .BlockTwoGama{
+    background-color: var(--secondary-color);
+    width: 250px;
+    position: absolute;
+    height: 250px;
+    border-radius: 20px;
+    top: 220px;
+    left: -80px;
+    transform: rotate(160deg);
+    z-index: -1; 
+}
+/* get started section  */
+.getStartedSection{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    background: linear-gradient(var(--secondary-text-color), var(--secondary-color));
+    border-radius: 20px;
+    padding: 25px;
+    align-items: center;
+}
+.getStartedSection .left h1{
+    color: var(--primary-color);
+    font-size: 38px;
+}
+.getStartedSection .left{
+    width: 40%;
+}
+@media screen and (max-width: 1030px) {
+    .mainProgressSection{
+        flex-direction: column;
+        width: -webkit-fill-available;
+        height: fit-content;
+        align-items: center;
+        margin-bottom: 100px;
+    }
+    .mainProgressSection .left{
+        margin: 30px auto;
+        width: 80%;
+        text-align: center;
+        align-items: center;
+    }
+    .mainProgressSection .left .checkParagraph{
+        width: 120%;
+        justify-content: space-around;
+    }
+    .getStartedSection{
+        flex-direction: column;
+    }
+    .getStartedSection .left{
+        width: 100%;
+        text-align: center;
+    }
+}

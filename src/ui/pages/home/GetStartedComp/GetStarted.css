@@ -1,0 +1,38 @@
+.mainGetStartedSection{
+    width: -webkit-fill-available;
+    height: fit-content;
+    margin-bottom: 60px;
+    
+}
+.mainGetStartedSection .main{
+    background: linear-gradient(var(--secondary-text-color), var(--secondary-color));
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 20px;
+    padding: 50px;
+}
+.mainGetStartedSection .main p{
+    /* color: var(--secondary-text-color); */
+    padding: 30px 120px;
+}
+.mainGetStartedSection .main h1{
+    font-size: 45px;
+    width: 70%;
+    margin: 0 auto;
+}
+@media screen and (max-width: 740px) {
+    .mainGetStartedSection{
+        width: -webkit-fill-available;
+    }
+    .mainGetStartedSection .main h1{
+        width: 100%;        
+        text-align: center;
+    }
+    .mainGetStartedSection .main p{
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+    
+}

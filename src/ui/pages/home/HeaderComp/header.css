@@ -1,0 +1,165 @@
+.mainHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 10px;
+    align-items: center;
+}
+/* logo */
+.Logo{
+    width: 50px;
+    color: var(--secondary-color);
+}
+.mainNav{
+    position: relative;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* main UL */
+.navItems{
+    color: var(--white);
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+/* parents elements LI*/
+.navItems .navItem{
+    display: flex;
+    cursor: pointer;
+    padding: 10px;
+    border-radius:15px ;
+}
+.navItems .navItem:hover{
+    color:var(--secondary-color);
+}
+/* childrens Menu subUL */
+.subMenu{
+    transform: scale(0);
+    transition: .5s;
+    position: absolute;
+    z-index: 1;
+    top: 75%;
+    background-color:var(--secondary-color) ;
+    border-radius: 20px;
+    padding: 0;
+    width: max-content;
+    color: #fff;
+}
+/* On Hovering subMenu Apearenssy */
+.navItems .navItem:hover .subMenu {
+    transform: scale(1) translateX(-2em);
+}
+/* arrow Icon  */
+.navItems .navItem:hover .arrowIcon{
+    transition: .5s;
+}
+/* arrow icon spin */
+.navItems .navItem:hover .arrowIcon{
+    transform: rotate(-180deg);
+}
+.ArrowBtn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: start;
+}
+
+.subMenu li{
+    padding: 15px;
+    transition: .5s;
+    list-style-type: none;
+    border-radius: 20px ;
+}
+/* hover on subMenu Li */
+.subMenu li:hover{
+    background-color: #fff;
+    color: var(--secondary-color);
+}
+.ResponsiveNav,.ResponsiveNavMenu{
+    display: none;
+}
+/* Responsive */
+@media screen and (max-width: 950px) {
+    .navItems{
+        display: none;
+    }
+    header .BuyNow{
+        display: none;
+    }
+    .ResponsiveNavMenu{
+        display: flex;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        transition: .4s;
+    }
+    .ResponsiveNavMenu:hover{
+        transform: rotate(-180deg);
+    }
+    header .mainNav{
+        width: 5%;
+    }
+    header{
+        position: relative;
+        height: fit-content;
+    }
+    .ResponsiveNav{
+        font-size: 15px;
+        z-index: 1;
+        font-weight: 700;
+        border-radius: 20px;
+        display: block;
+        position: absolute;
+        width: -webkit-fill-available;
+        top: 90%;
+        height: max-content;
+        opacity: .9;
+        transition: .4s;
+        background-color: var(--secondary-color);
+    }
+    .ResponsiveNav ul{
+        height: 100%;
+        list-style-type: none;
+        padding: 20px;
+    }
+    .ResponsiveNav ul li{
+        padding: 15px;
+        border-radius: 12px;
+        transition: .4s;
+        display: flex;
+        position: relative;
+    }
+    .ResponsiveNav ul li .arrowIcon{
+        padding-left: 30px;
+    }
+    .ResponsiveNav ul li:hover{
+        cursor: pointer;
+        background-color: var(--white);
+        color: var(--secondary-color);
+    }
+    header .closed{
+        transform: scale(0);
+    }
+    header .opened{
+        transform: scale(1);
+    }
+    header .ResponsiveSubMenu{
+        background-color: var(--white);
+        width: -webkit-fill-available;
+        border-radius: 20px;
+        transition: .5s;
+        margin: 10px 5px;
+        position: inherit;
+    }
+    header .ResponsiveSubMenu li{
+        transition: .4s;
+    }
+    header .ResponsiveSubMenu li:hover{
+        background-color: var(--secondary-color);
+        color: var(--white);
+    }
+}
